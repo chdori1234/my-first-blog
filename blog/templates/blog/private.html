@@ -1,0 +1,32 @@
+{% load staticfiles %}
+<html>
+<head>
+      <title>Django Girls blog</title>
+      <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+      <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+      <link href='//fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+      <link rel="stylesheet" href="{% static 'css/blog.css' %}">
+</head>
+<body>
+    <div class="page-header">
+      <a href="{% url 'post_new' %}" class="top-menu"><span class="glyphicon glyphicon-plus"></span></a>
+      <h1><a href="/">Python Practice</a></h1>
+    </div>
+    <div class="content container">
+
+        본 사이트는 테스트용 사이트입니다.<br><br>
+
+        아직은 택스트 작성만 가능합니다<br><br>
+
+        글 작성은 오른쪽 위 하얀 십자버튼을 클릭하시면 작성 가능합니다. <br><br>
+
+        디버깅 중이므로 애러가 발생한다면 알려주시기 바랍니다.<br><br>
+
+        * 아직 로그인 기능이 없으므로 게스트 유저로 접속됩니다. 가급적이면 성함을 써주시면 감사합니다<br>
+        * 사이트에 추가할 기능, 고려해야 할 점 들을 작성해 주시면 감사합니다.<br>
+        * 기타 신변잡기, 잡담도 환영합니다. <br><br>
+
+        감사합니다.
+  </div>
+</body>
+</html>

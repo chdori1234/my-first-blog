@@ -18,8 +18,9 @@ right: -40px;
 bottom: -40px;
 width: auto;
 height: auto;
-background-image: url(https://cdn.pixabay.com/photo/2014/08/25/22/52/control-427510_960_720.png);
-background-size: cover;
+background-image:url('2.png');
+background-color:white;
+background-size:cover;
 -webkit-filter: blur(5px);
 z-index: 0;
 }

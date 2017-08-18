@@ -1,0 +1,27 @@
+{% load staticfiles %}
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>intro Form</title>
+  <link rel="stylesheet" href="{% static 'css/intro.css' %}">
+  <style>
+  /* NOTE: The styles were added inline because Prefixfree needs access to your styles and they must be inlined if they are on local disk! */
+  @import url(https://fonts.googleapis.com/css?family=Exo:100,200,400);
+  @import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:700,400,300);
+  </style>
+</head>
+
+<body>
+  <div class="body"></div>
+		<div class="grad"></div>
+		<div class="header">
+			<div>株式会社ブラステック<br>
+        <span>人材管理システム</span></div>
+		</div>
+		<br>
+    <div>
+      {% block content %}
+      {% endblock %}
+    </div>
+</body>
+</html>

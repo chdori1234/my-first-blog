@@ -8,29 +8,31 @@
         <link rel="stylesheet" href="{% static 'css/blog.css' %}">
   </head>
   <body>
-      <div class="page-header">
-        <a href="{% url 'post_new' %}" class="top-menu"><span class="glyphicon glyphicon-plus"></span></a>
-        <h1><a href="/">Python Practice</a></h1>
-      </div>
-      <div class="content container">
-        <h3><a href="{% url 'private' %}">공지사항</a></h3>
-      </div>
-      <hr>
-      <div class="content container">
-        <div class="row">
-            <div class="col-md-8">
-              {% block content %}
-              {% endblock %}
-            </div>
-        </div>
+    <div class="page-header">
+      <h1><a href="/">Python Practice</a></h1>
     </div>
-    <hr/>
-      <div>
-          현재 갱신중... 2번 쨰 갱신, 수정자 kyriale
-          db=sqlite
-          言語＝python　3.5
-          framwork = django
-          editer = atom
+    <div class="jb-container">
+      <div class="jb-header">
+        <a href="{% url 'private' %}">Notice</a>
       </div>
+      <div class="jb-content">
+        {% block content %}
+        {% endblock %}
+      </div>
+      <div class="jb-sidebar">
+        <ul>
+          <li><a href="{% url 'post_new' %}">データ入力</a></li>
+          <li><a href="contact.asp">Contact</a></li>
+          <li><a href="about.asp">About</a></li>
+        </ul>
+      </div>
+      <div class="jb-footer">
+        현재 갱신중... 3번 쨰 갱신, 수정자 kyriale, 갱신일 17/8/18
+        db=sqlite
+        言語＝python　3.5
+        framwork = django
+        editer = atom
+      </div>
+    </div>
   </body>
 </html>

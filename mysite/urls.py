@@ -5,6 +5,7 @@ from django.contrib.auth import views as auth_views
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'', include('blog.urls')),
+    
     #url ( '^' ,  include ( 'django.contrib.auth.urls' ),
 
     url(r'^$',
@@ -15,11 +16,12 @@ urlpatterns = [
         }
     ),
     url(
-        r'^accounts/logout/',
+        r'^accounts/logout/$',
         auth_views.logout,
         name='logout',
         kwargs={
-            'next_page': 'login.html'
+            'next_page': '/'
         }
     ),
+
 ]

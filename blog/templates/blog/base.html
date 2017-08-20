@@ -10,25 +10,30 @@
   <body>
     <div class="page-header">
       <h1><a href="{% url 'post_list' %}">人材管理</a></h1>
-       <p class="top-menu">Hello {{ user.username }} <small>(<a href="{% url 'logout' %}">Log out</a>)</small></p>
     </div>
     <div class="jb-container">
       <div class="jb-header">
-        <a href="{% url 'private' %}">Notice</a>
+        Hello! {{ user.username }} Have a nice day!
+        <div class="right">
+        </div>
       </div>
       <div class="jb-content">
         {% block content %}
         {% endblock %}
       </div>
-      <div class="jb-sidebar">
+      <div id="button">
         <ul>
-          <li><a href="contact.asp">データ一覧</a></li>
-          <li><a href="{% url 'post_new' %}">データ入力</a></li>
-          <li><a href="about.asp">通計</a></li>
+          <li><a href="{% url 'private' %}">Notice</a></li>
+          <li><a href="{% url 'post_list' %}">職人データ一覧</a></li>
+          <li><a href="{% url 'post_new' %}">職人データ入力<</a></li>
+          <li><a href="#">通計</a></li>
+          <li><a href="{% url 'logout' %}">Log out</a></li>
         </ul>
       </div>
+    </div>
+    <hr/>
       <div class="jb-footer">
-        현재 갱신중... 4번 쨰 갱신, 수정자 kyriale, 갱신일 17/8/18
+        현재 갱신중... 5번 쨰 갱신, 수정자 kyriale, 갱신일 17/8/18
         db=sqlite
         言語＝python　3.5
         framwork = django
